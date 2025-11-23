@@ -16,5 +16,5 @@ const storage = multer_1.default.diskStorage({
     },
 });
 const upload = (0, multer_1.default)({ storage: storage });
-router.post('/analyze', upload.single('audio'), analyze_1.analyzeVoice);
+router.post('/audio', upload.single('audio'), analyze_1.analyzeVoice);
 exports.default = router;
